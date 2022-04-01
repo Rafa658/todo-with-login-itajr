@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+:root {
+    --primary-color: #183358;
+    --secondary-color: #d8c11a;
+    --light-color: #f4f4f4;
+    --dark-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: var(--primary-color);
+}
+
+.Navbar {
+    display: flex;
+    background: var(--dark-color);
+}
+
+.Navbar a {
+    padding: 1rem;
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+.Navbar a:hover {
+    background: var(--light-color);
+    color: var(--dark-color)
+}
+
+.Navbar a.active {
+    background: var(--secondary-color);
+    color: var(--light-color)
+}
