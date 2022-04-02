@@ -46,7 +46,13 @@
 }
 
 li {
+    display: flex;
+    justify-content: space-between;
     list-style-type: none;
     box-sizing: border-box;
     padding: 1rem;
+}
+
+li .ImCross {
+    cursor: pointer;
 }

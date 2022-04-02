@@ -43,7 +43,18 @@ const Home = () => {
                 </div>
                 {chores.map(chore => {
                     return (
-                        <li key={chore.index} className='container chore-item'> {chore.index + 1}: {chore.desc} </li>
+                        <li
+                            key={chore.index}
+                            className='container chore-item'
+                        >
+                            {chore.desc}
+                            <ImCross
+                                className="ImCross"
+                                onClick={() => {
+                                    setChores(currentChores => currentChores.filter(currentChore => currentChore != chore))
+                                }}
+                            />
+                        </li>
                     )
                 })}
             </div>
