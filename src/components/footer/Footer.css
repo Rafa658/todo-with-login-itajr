@@ -6,7 +6,11 @@
     --dark-color: #333;
 }
 
-.App {
-    font-family: 'Lato', sans-serif;
-    text-align: center;
+footer {
+    position: absolute;
+    color: var(--light-color);
+    bottom: 0;
+    width: 100%;
+    line-height: 3.5rem;
+    background: var(--dark-color);
 }
