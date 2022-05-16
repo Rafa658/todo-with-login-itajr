@@ -8,7 +8,7 @@ const Navbar = (props) => {
     return(
         <div className="Navbar">
             <NavLink to='/'>Home</NavLink>
-            <NavLink to='/login'>Login</NavLink>
+            <NavLink to='/todo'>To-do</NavLink>
             <NavLink to='/about'>Sobre Nós</NavLink>
         </div>
     )

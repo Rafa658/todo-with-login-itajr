@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { ImPlus, ImCross } from 'react-icons/im'
-import './Home.css'
+import './Todo.css'
 
-const Home = () => {
+const Todo = () => {
 
     const [input, setInput] = useState('')
     const [count, setCount] = useState(0)
@@ -62,4 +62,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Todo
