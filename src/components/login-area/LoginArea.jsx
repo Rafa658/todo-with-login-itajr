@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from 'react-router-dom'
 
 import './LoginArea.css'
 
@@ -12,7 +13,7 @@ const LoginArea = () => {
                 <input type="password" placeholder="Senha"/>
             </form>
             <div className="btn">ENTRAR</div>
-            <a href="">Criar uma conta</a>
+            <NavLink to='/signup'>Criar uma conta</NavLink>
             <a href="">Esqueci minha senha</a>
         </div>
     )

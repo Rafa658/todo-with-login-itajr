@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+:root {
+    --primary-color: #183358;
+    --secondary-color: #d8c11a;
+    --light-color: #f4f4f4;
+    --dark-color: #333;
+}
+
+.Login {
+    width: 25vw;
+    height: 50vh;
+    background: var(--light-color);
+    margin: 15vh auto;
+    border-radius: 15px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Login span {
+    font-size: 2rem;
+}
+
+.Login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Login a {
+    text-decoration: none;
+    color: #1974D2;
+}
+
+input {
+    background: var(--light-color);
+    height: 3rem;
+    width: 90%;
+    margin: .5rem auto;
+    border: 1px solid #d3d3d3;
+}
+
+input:focus {
+    outline: none;
+}
+
+.btn {
+    width: 90%;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0 auto;
+    border-radius: 0;
+    background: #ddd;
+    margin-bottom: 1rem;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow: hidden;
+    }
+    .Login form {
+        margin: 1rem 0;
+    }
+    .Login {
+        width: 60vw;
+    }
+    .Login input {
+        width: 90%;
+    }
+    .Login .btn {
+        width: 90%;
+    }
+    .Navbar {
+        flex-direction: column;
+    }
+    .Navbar a {
+        width: 100%;
+        padding: 1rem 0;
+    }
+}
