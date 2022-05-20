@@ -7,8 +7,8 @@
 }
 
 .Login {
-    width: 25vw;
-    height: 50vh;
+    width: 400px;
+    height: 400px;
     background: var(--light-color);
     margin: 15vh auto;
     border-radius: 15px;

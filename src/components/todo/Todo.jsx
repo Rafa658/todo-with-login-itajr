@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ImPlus, ImCross } from 'react-icons/im'
+import axios from "axios";
 import './Todo.css'
 
-const Todo = () => {
+const url = 'http://localhost:4000/verify'
+
+const List = () => {
 
     const [input, setInput] = useState('')
     const [count, setCount] = useState(0)
@@ -58,6 +61,44 @@ const Todo = () => {
                     )
                 })}
             </div>
+        </div>
+    )
+}
+
+const WaitingVerification = () => {
+    return (
+        <div className="container">
+            <div className="home">
+                <span className="text header">Faça login para acessar a lista.</span>
+            </div>
+        </div>
+    )
+}
+
+const Todo = () => {
+
+    const [verified, setVerified] = useState(false)
+    const [isLoaded, setIsLoaded] = useState(false)
+
+    const user = JSON.parse(localStorage.getItem("user"))
+
+    useEffect(() => {
+        axios.post(url, { user })
+            .then(res => {
+                setVerified(res.data.verified)
+                setIsLoaded(true)
+            })
+            .catch(err => {
+                setIsLoaded(false)
+                console.log(err)
+            })
+    }, [])
+
+    return (
+        <div>
+            {!isLoaded && <WaitingVerification />}
+            {isLoaded && !verified && <WaitingVerification />}
+            {isLoaded && verified && <List />}
         </div>
     )
 }
